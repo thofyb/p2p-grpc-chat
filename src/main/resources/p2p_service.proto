@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package se.arch.chat.grpc;
+
+service Peer {
+    rpc Msg (stream PeerMessage) returns (stream Empty) {}
+    rpc SubscribeMsg(Empty) returns (stream PeerMessage) {}
+}
+
+message PeerMessage {
+    string name = 1;
+    string time = 2;
+    string text = 3;
+}
+
+message Empty {
+}
