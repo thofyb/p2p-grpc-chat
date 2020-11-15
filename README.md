@@ -16,7 +16,7 @@ users:
 ```python peer.py <server's ip address> <port> <username>```
 
 
-##Docker build
+## Docker build
 
 1. Build:
 `docker build --tag p2p-grpc-chat:1.0 .`
